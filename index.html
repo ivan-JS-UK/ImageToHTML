@@ -1,0 +1,136 @@
+<html>
+<head><meta charset="utf-8">
+<title>ImageToHTML - convert images to HTML</title>
+</head>
+<body>
+<h2>ImageToHTML</h2>
+<div id="ithtml_body">
+<div id="ithtml_progres_body"><div id="ithtml_progres"><div id="ithtml_progres_position"></div>&#9203;</div></div>
+<div id="ithtml_canvas"><canvas id="canva" width="200" height="100" title="Image in Canvas"></canvas></div>
+<div class="ithtml_panels"><input id="open_file" type="file" accept="image/*"><label for="open_file" id="open_file_label">Open images</label> <button id="buttonImgtoHTML" onclick="imgToHTML();">Convert Image in HTML</button></div>
+<div id="ithtml_result"></div>
+<textarea id="ithtml_result_html" readonly title="HTML code"></textarea>
+<div id="ithtml_status"></div>
+<div class="ithtml_panels"><button id="button_open_veiw" onclick="open_veiw();">View in new window</div>
+</div>
+<br><hr id="ithtml_hr">
+<div>
+<p><b>ImageToHTML</b> - convert images to HTML. Site <a href="http://яваскрипт.укр/ImageToHTML">http://яваскрипт.укр/ImageToHTML</a> (UA).</p>
+<script src="index.js"></script>
+<style>
+h2{text-align:center;}
+#ithtml_body{background-color:#fcfcfc;border-radius: 15px;}
+#ithtml_progres_body{
+position: fixed;
+display: none;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #dadada;
+opacity: 0.9;
+cursor: progress;
+}
+#ithtml_progres{
+margin-top: 5%;
+padding-top: 15px;
+display: block;
+width: 100%;
+text-align: center;
+font-size: 125px;
+background-color: dimgrey;
+border-radius: 9px;
+}
+#ithtml_progres_position{
+display: block;
+width: 100%;
+background: #66bb6a;
+box-shadow: inset 0px -1px 2px rgba(0,0,0,0.1);
+opacity: 1;
+animation: progressAnime 2s linear infinite;
+background-image: linear-gradient(-45deg, rgba(255,255,255,0.125) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.125) 50%, rgba(255,255,255,0.125) 75%, transparent 75%, transparent);
+background-size: 35px 35px;
+height: 28px;
+border-radius: 9px;
+}
+@keyframes 
+progressAnime{ 
+0%{background-position:0 0;}
+100%{background-position:35px 35px}
+}
+#open_file{
+overflow: hidden;
+width: 0;
+height: 0;
+}
+#open_file_label{
+margin: 2px;
+cursor: pointer;
+color: #fff;
+background-color: #6082cd;
+padding: 10px;
+font-family: monospace;
+border: 0;
+border-radius: 5px;
+box-shadow: 0px 0px 5px 0px #2196f3;
+}
+#buttonImgtoHTML{
+margin: 2px;
+cursor: pointer;
+color: #fff;
+background-color: #db3214;
+padding: 10px;
+font-family: monospace;
+font-weight: bold;
+border: 0;
+border-radius: 5px;
+box-shadow: 0px 0px 5px 0px #f37521;
+}
+#button_open_veiw{
+margin: 2px;
+cursor: pointer;
+color: #fff;
+background-color: #2196F3;
+padding: 10px;
+font-family: monospace;
+font-weight: bold;
+border: 0;
+border-radius: 5px;
+box-shadow: 0px 0px 5px 0px #244e70;
+}
+#open_file_label:hover, #buttonImgtoHTML:hover, #button_open_veiw:hover{opacity: 0.6;}
+#ithtml_canvas{
+margin: 5px;
+padding: 5px;
+overflow: auto;
+max-height: 500px;
+text-align: center;
+}
+#canva{margin: 0 auto;}
+.ithtml_panels{
+text-align: center;
+}
+#ithtml_result{padding: 5px;}
+#ithtml_result_html{
+display: block;
+width: 99.9%;
+height: 500px;
+min-height: max-content;
+border: 0;
+color:black;
+}
+#ithtml_result_html:hover{
+box-shadow: 1px 1px 5px 1px #a7b3f7;
+}
+#ithtml_status{
+text-align: center;
+color: #0842b8;
+}
+#ithtml_hr{
+border: 0;
+background-color: #b1d6f3;
+height: 2px;
+}
+</style>
+</body>
+</html>
