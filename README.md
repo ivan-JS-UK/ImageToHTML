@@ -1,5 +1,3 @@
-# ImageToHTML
-Convert Images to HTML code for use JavaScript
 #ImageToHTML
 
 Convert image to code HTML in JavaScript
@@ -25,7 +23,7 @@ Example image code HTML 2px*2px
 ```
 
 Function image in canvas to HTML code:
-    ```javascript
+```javascript
 function CanvasToHTML(canvas){
     var s='<div style="width:'+canvas.width+'px;height:'+canvas.height+'px;">', style='', colors=[];
     for(var y=0,i0=-1,w=0,i,c;y<canvas.height;y++){
@@ -59,5 +57,5 @@ function CanvasToHTML(canvas){
     s+='</div>';
     return '<style>.line_pixel{display: block;}.pixel{display:inline-block;width:1px;height:1px;}\n'+style+'\n</style>\n'+s;
 }
-    ```
+```
 
